@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Đồ Án Web Bán Sách</title>
+    <link href="~/Content/templatemo_style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <div id="templatemo_container">
+        <div id="templatemo_menu">
+            <ul>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            @Html.ActionLink("TRANG CHỦ", "Index", "Admin")
+                        </li>
+                        <li>
+                            @Html.ActionLink("Quản Lý Chủ Đề", "Sanpham", "Admin")
+                        </li>
+                        <li>
+                            @Html.ActionLink("Quản Lý Nhà Xuất Bản", "Nhaxuatban", "Admin")
+                        </li>
+                        <li>
+                            @Html.ActionLink("Quản Lý Sách", "Sach", "Admin")
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </ul>
+        </div> <!-- end of menu -->
+
+        <div id="templatemo_header">
+            <center>
+                <img src="~/Content/images/templatemo_header_bg.jpg" />
+            </center>
+        </div> <!-- end of header -->
+
+
+        <div id="templatemo_content">
+
+            <div id="templatemo_content_left">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            @Html.Action("chude", "BookStore")
+                            <br />
+                            @Html.Action("Nhaxuatban", "BookStore")
+                            <div class="list-group">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="templatemo_content_left_section">
+                    <h1>Bestsellers</h1>
+                    <img src="~/Content/images/CAPHECUNGTONY.jpg" hieght="210" width="190" />
+                    <img src="~/Content/images/hanh-phuc-khong-la-cho-doi.jpg" hieght="210" width="190" />
+                </div>
+            </div> <!-- end of content left -->
+
+            <div id="templatemo_content_right">
+                <div>
+                    @RenderBody()
+                </div>
+
+
+
+
+                <div class="cleaner_with_height">&nbsp;</div>
+            </div> <!-- end of content -->
+
+            <div id="templatemo_footer">
+
+                @Html.ActionLink("TRANG CHỦ", "Index", "Admin") | <a href="#">Books</a> | <a href="#">New Releases</a> | <a href="#">FAQs</a> | <a href="#">Contact Us</a><br />
+                Copyright © 2019 <a href="#"><strong>Duy-Tiến-Hiếu-Quang</strong></a> | <a href="http://www.iwebsitetemplate.com" target="_parent">Website Templates</a> by <a href="http://www.templatemo.com" target="_parent" title="free css templates">Free CSS Templates</a>
+            </div>
+            </div>
+</body>
+</html>

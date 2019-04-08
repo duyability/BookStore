@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Đồ Án Web Bán Sách</title>
+    <link href="~/Content/templatemo_style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+ 
+    <div id="templatemo_container">
+        <div id="templatemo_menu">
+            <ul>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            @Html.ActionLink("TRANG CHỦ", "Index", "BookStore")
+                        </li>
+                        <li>
+                            @Html.ActionLink("ĐĂNG KÝ", "Dangky", "Nguoidung")
+                        </li>
+                        <li>
+                            @Html.ActionLink("ĐĂNG NHẬP", "Dangnhap", "Nguoidung")
+                        </li>
+                        <li>
+                            @Html.Action("GiohangPartial", "Giohang")
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </ul>
+        </div> <!-- end of menu -->
+
+        <div id="templatemo_header">
+
+            <center><img src="~/Content/images/bannersach.jpg" width="900" /></center>
+        </div> <!-- end of header -->
+
+        <div id="templatemo_content">
+
+            <div id="templatemo_content_left">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            @Html.Action("chude", "BookStore")
+                            <br />
+                            @Html.Action("Nhaxuatban", "BookStore")
+                            <div class="list-group">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <br />
+                <div class="templatemo_content_left_section">
+                    <h1>Bestsellers</h1>
+                    <img src="~/Content/images/CAPHECUNGTONY.jpg" hieght="210" width="190"/>
+                    <img src="~/Content/images/hanh-phuc-khong-la-cho-doi.jpg" hieght="210" width="190"/>
+                </div>
+            </div> <!-- end of content left -->
+
+            <div id="templatemo_content_right">
+                <div>
+                    @RenderBody()
+                </div>
+                
+
+                
+
+            <div class="cleaner_with_height">&nbsp;</div>
+        </div> <!-- end of content -->
+
+            <div id="templatemo_footer">
+                <script lang="javascript">var _vc_data = { id: 1333984, secret: '7115027849000277ecc6345c58c80967' }; (function () { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.defer = true; ga.src = '//live.vnpgroup.net/client/tracking.js?id=1333984'; var s = document.getElementsByTagName('script'); s[0].parentNode.insertBefore(ga, s[0]); })();</script>
+                <div>
+                    <center><a><b>Địa chỉ Book Store<b></a></center>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.1340800609833!2d106.70768461411669!3d10.801041361693985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528baf2c0ed2b%3A0x2b80777097f7e0c6!2zNDQzIMSQaeG7h24gQmnDqm4gUGjhu6csIFBoxrDhu51uZyAxNywgQsOsbmggVGjhuqFuaCwgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1554532111256!5m2!1svi!2s" width="900" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+
+                @Html.ActionLink("TRANG CHỦ", "Index", "Admin") | <a href="#">Books</a> | <a href="#">New Releases</a> | <a href="#">FAQs</a> | <a href="#">Contact Us</a><br />
+                Copyright © 2019 <a href="#"><strong>Duy-Tiến-Hiếu-Quang</strong></a> | <a href="http://www.iwebsitetemplate.com" target="_parent">Website Templates</a> by <a href="http://www.templatemo.com" target="_parent" title="free css templates">Free CSS Templates</a>
+            </div>
+
+</body>
+</html>
